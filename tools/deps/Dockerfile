@@ -14,13 +14,13 @@
 # limitations under the License.
 #
 
-FROM centos:7.8.2003 as rpmbuild
+FROM centos:centos7.9.2009 as rpmbuild
 
 WORKDIR /root
 COPY rpmbuild.sh /root/
 RUN /root/rpmbuild.sh
 
-FROM centos:7.8.2003
+FROM centos:centos7.9.2009
 
 RUN mkdir /rpmbuild/
 COPY --from=rpmbuild /ovms-rpmbuild-deps.tar.xz /rpmbuild/
