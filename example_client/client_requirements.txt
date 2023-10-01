@@ -1,3 +1,3 @@
 futures==3.1.1
-opencv-python==4.1.2.30
+opencv-python==4.8.1.78.30
 tensorflow-serving-api==2.*
